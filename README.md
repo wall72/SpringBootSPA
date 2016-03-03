@@ -101,12 +101,12 @@ public class ItemController {
 ```
 
 * REST 테스트를 위해 Chrome 을 이용한다.
-* [REST Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo "Advanced REST Client ")
+* [Advanced REST Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo "Advanced REST Client")
 
-조회 > GET http://localhost:8080/items
-입력 > POST http://localhost:8080/items Content-Type: application/json {"checked":false, "description":"My First Task"}
-수정 > PUT http://localhost:8080/items/1 Content-Type: application/json {"checked":false, "description":"My First Task updated"}
-삭제 > DELETE http://localhost:8080/items/1 Content-Type: application/json
+* 조회 > GET http://localhost:8080/items
+* 입력 > POST http://localhost:8080/items Content-Type: application/json {"checked":false, "description":"My First Task"}
+* 수정 > PUT http://localhost:8080/items/1 Content-Type: application/json {"checked":false, "description":"My First Task updated"}
+* 삭제 > DELETE http://localhost:8080/items/1 Content-Type: application/json
 
 #### 6. UI 파일 추가
 * 정적 파일은 static 폴더에 추가한다.
