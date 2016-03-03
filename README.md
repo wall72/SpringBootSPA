@@ -11,7 +11,7 @@
 #### 개발환경 (Environment)
 * STS 3.7.2
 * JDK 1.8.0_65
-* Windows 8.1
+* Mac OS X (El Capitan)
 
 #### 1. Create Project
 * New > Spring Starter Project
