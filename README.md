@@ -103,10 +103,38 @@ public class ItemController {
 * REST 테스트를 위해 Chrome 을 이용한다.
 * [Advanced REST Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo "Advanced REST Client")
 
-* 조회 > GET http://localhost:8080/items
-* 입력 > POST http://localhost:8080/items Content-Type: application/json {"checked":false, "description":"My First Task"}
-* 수정 > PUT http://localhost:8080/items/1 Content-Type: application/json {"checked":false, "description":"My First Task updated"}
-* 삭제 > DELETE http://localhost:8080/items/1 Content-Type: application/json
+* 조회
+```
+URL : http://localhost:8080/items
+Method : GET
+```
+![Screenshot #1](https://github.com/wall72/wall72.github.io/blob/master/images/spring-boot-spa-01.png?raw=true)
+
+* 입력
+```
+URL : http://localhost:8080/items
+Method : POST
+Header : Content-Type: application/json
+Body : {"checked":false, "description":"My First Task"}
+```
+![Screenshot #2](https://github.com/wall72/wall72.github.io/blob/master/images/spring-boot-spa-02.png?raw=true)
+
+* 수정
+```
+URL : http://localhost:8080/items/1
+Method : PUT
+Header : Content-Type: application/json
+Body : {"checked":false, "description":"My First Task updated"}
+```
+![Screenshot #3](https://github.com/wall72/wall72.github.io/blob/master/images/spring-boot-spa-03.png?raw=true)
+
+* 삭제
+```
+URL : http://localhost:8080/items/1
+Method : DELETE
+Header : Content-Type: application/json
+```
+![Screenshot #4](https://github.com/wall72/wall72.github.io/blob/master/images/spring-boot-spa-04.png?raw=true)
 
 #### 6. UI 파일 추가
 * 정적 파일은 static 폴더에 추가한다.
@@ -231,6 +259,8 @@ public class ItemController {
 
 #### 7. 테스트
 * http://localhost:8080
+
+![Screenshot #5](https://github.com/wall72/wall72.github.io/blob/master/images/spring-boot-spa-05.png?raw=true)
 
 #### 11. Reference Sites
 * [Rapid prototyping with Spring Boot and AngularJS](http://g00glen00b.be/prototyping-spring-boot-angularjs "Rapid prototyping with Spring Boot and AngularJS")
