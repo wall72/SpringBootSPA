@@ -1,0 +1,6 @@
+# Gradle on STS
+/bin/
+/build/
+/gradle/
+/.gradle/
+/.settings/
