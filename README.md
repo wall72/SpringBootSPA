@@ -1,24 +1,24 @@
-### Spring Boot SPA
+# Spring Boot SPA
 * Spring Boot SPA Sample Project
 
-#### 목표
+### 목표
 * Spring Boot 를 이용하여 프로젝트를 생성한다.
 * Web, JPA, H2, WebJar (Angular.js, Bootstrap) 사용설정을 추가한다.
 * DBMS에 CRUD를 수행하는 서버 기능을 작성한다.
 * SPA (Single-Page Application) 샘플을 추가한다..
 * Spring Boot Application을 실행하고 결과를 확인한다.
 
-#### 개발환경 (Environment)
+### 개발환경 (Environment)
 * STS 3.7.2
 * JDK 1.8.0_65
 * Mac OS X (El Capitan)
 
-#### 1. Create Project
+### 1. Create Project
 * New > Spring Starter Project
 * Packaging: War (웹 프로젝트를 위한 패키징)
 * Dependencies: Web (Spring Web, MVC 사용), JPA (JPA를 사용한 데이터저장 처리), H2 (저장소로 H2 사용)
 
-#### 2. build.gradle dependency 추가
+### 2. build.gradle dependency 추가
 * WebJars를 통해 Angular.js, Bootstrap 사용을 위해 추가
 
 ```
@@ -32,7 +32,7 @@ compile('org.webjars.bower:angular-resource:1.5.0')
 * Dependencies를 Update한다. (Maven의 Update Project와 동일)
 * {Project} > Gradle > Refresh All
 
-#### 3. Entity 클래스 추가
+### 3. Entity 클래스 추가
 * 자료 저장을 위한 저장단위 클래스 선언을 위해 domain 패키지에 Entity 클래스를 추가한다.
 
 ```java
@@ -56,7 +56,7 @@ public class Item {
 }
 ```
 
-#### 4. Repository 인터페이스 추가
+### 4. Repository 인터페이스 추가
 * JPA 를 통한 자료 저장을 위해 domain 패키지에 JpaRepository 를 상속한 인터페이스를 추가한다.
 
 ```java
@@ -65,7 +65,7 @@ public interface ItemRepository extends JpaRepository<Item, Integer> {
 }
 ```
 
-#### 5. Controller 클래스 추가
+### 5. Controller 클래스 추가
 * 클라이언트에서 요청한 리퀘스트를 처리하기 위해 web 패키지에 Controller 클래스를 추가한다.
 * 참조 튜토리얼에도 서비스 클래스는 없으므로 일단 간단하게 Controller 만으로 처리한다.
 
@@ -104,39 +104,47 @@ public class ItemController {
 * [Advanced REST Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo "Advanced REST Client")
 
 * 조회
+
 ```
 URL : http://localhost:8080/items
 Method : GET
 ```
+
 ![Screenshot #1](https://github.com/wall72/wall72.github.io/blob/master/images/spring-boot-spa-01.png?raw=true)
 
 * 입력
+
 ```
 URL : http://localhost:8080/items
 Method : POST
 Header : Content-Type: application/json
 Body : {"checked":false, "description":"My First Task"}
 ```
+
 ![Screenshot #2](https://github.com/wall72/wall72.github.io/blob/master/images/spring-boot-spa-02.png?raw=true)
 
 * 수정
+
 ```
 URL : http://localhost:8080/items/1
 Method : PUT
 Header : Content-Type: application/json
 Body : {"checked":false, "description":"My First Task updated"}
 ```
+
 ![Screenshot #3](https://github.com/wall72/wall72.github.io/blob/master/images/spring-boot-spa-03.png?raw=true)
 
 * 삭제
+
 ```
 URL : http://localhost:8080/items/1
 Method : DELETE
 Header : Content-Type: application/json
 ```
+
 ![Screenshot #4](https://github.com/wall72/wall72.github.io/blob/master/images/spring-boot-spa-04.png?raw=true)
 
-#### 6. UI 파일 추가
+### 6. UI 파일 추가
 * 정적 파일은 static 폴더에 추가한다.
 * src/main/resources/static
 
@@ -257,10 +265,10 @@ Header : Content-Type: application/json
 }(angular));
 ```
 
-#### 7. 테스트
+### 7. 테스트
 * http://localhost:8080
 
 ![Screenshot #5](https://github.com/wall72/wall72.github.io/blob/master/images/spring-boot-spa-05.png?raw=true)
 
-#### 11. Reference Sites
+### 8. Reference Sites
 * [Rapid prototyping with Spring Boot and AngularJS](http://g00glen00b.be/prototyping-spring-boot-angularjs "Rapid prototyping with Spring Boot and AngularJS")
